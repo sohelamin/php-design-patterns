@@ -1,7 +1,9 @@
 <?php
-
-// Simple Factory Pattern. This allows interfaces for creating objects without exposing the object creation logic to the client.
-
+/**
+ * Simple Factory Pattern.
+ *
+ * This allows interfaces for creating objects without exposing the object creation logic to the client.
+ */
 class CarFactory
 {
     protected $brands = [];
@@ -31,31 +33,23 @@ interface CarInterface
     public function design();
     public function assemble();
     public function paint();
-    public function buildUp();
 }
 
 class MercedesCar implements CarInterface
 {
     public function design()
     {
-        echo 'Designing Mercedes Car <br/>';
+        return 'Designing Mercedes Car';
     }
 
     public function assemble()
     {
-        echo 'Assembling Mercedes Car <br/>';
+        return 'Assembling Mercedes Car';
     }
 
     public function paint()
     {
-        echo 'Painting Mercedes Car <br/>';
-    }
-
-    public function buildUp()
-    {
-        $this->design();
-        $this->assemble();
-        $this->paint();
+        return 'Painting Mercedes Car';
     }
 }
 
@@ -63,32 +57,30 @@ class ToyotaCar implements CarInterface
 {
     public function design()
     {
-        echo 'Designing Toyota Car <br/>';
+        return 'Designing Toyota Car';
     }
 
     public function assemble()
     {
-        echo 'Assembling Toyota Car <br/>';
+        return 'Assembling Toyota Car';
     }
 
     public function paint()
     {
-        echo 'Painting Toyota Car <br/>';
-    }
-
-    public function buildUp()
-    {
-        $this->design();
-        $this->assemble();
-        $this->paint();
+        return 'Painting Toyota Car';
     }
 }
 
 $carFactory = new CarFactory;
 
 $mercedes = $carFactory->make('mercedes');
-$mercedes->buildUp();
+echo $mercedes->design() . '<br/>';
+echo $mercedes->assemble() . '<br/>';
+echo $mercedes->paint() . '<br/>';
+
 echo '<br/>';
 
 $toyota = $carFactory->make('toyota');
-$toyota->buildUp();
+echo $toyota->design() . '<br/>';
+echo $toyota->assemble() . '<br/>';
+echo $toyota->paint() . '<br/>';
