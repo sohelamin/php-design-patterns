@@ -8,7 +8,7 @@
 - [x] Observer
 - [x] Singleton
 - [x] Strategy
-- [ ] Iterator
+- [x] Iterator
 - [ ] Proxy
 - [ ] Decorator
 - [ ] S.O.L.I.D Principle
