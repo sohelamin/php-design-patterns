@@ -9,7 +9,7 @@
 - [x] Singleton
 - [x] Strategy
 - [x] Iterator
-- [ ] Proxy
+- [x] Proxy
 - [ ] Decorator
 - [ ] S.O.L.I.D Principle
 - [ ] CLEAN Architecture
