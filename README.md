@@ -10,6 +10,6 @@
 - [x] Strategy
 - [x] Iterator
 - [x] Proxy
-- [ ] Decorator
+- [x] Decorator
 - [ ] S.O.L.I.D Principle
 - [ ] CLEAN Architecture
